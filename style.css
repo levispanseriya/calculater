@@ -1,0 +1,128 @@
+*{
+    font-family: Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+body{
+    touch-action: manipulation;
+    background-color: #222;
+    color: #EEE;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.calculator{
+    width: 300px;
+    height: 487.5px;
+    background-color: #333;
+    border: 3px solid #111;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 10px;
+    top: 40px;
+}
+
+.result{
+    height: 30%;
+}
+
+.history{
+    text-align: right;
+    height: 25%;
+    margin: 0 10px;
+    padding-top: 10%;
+    font-size: 1.5rem;
+    color: #CCC;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.output{
+    direction: rtl;
+    text-align: right;
+    height: 40%;
+    margin: 0 10px;
+    padding-top: 5px;
+    font-size: 2.5rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.keyboard{
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.operator,
+.number,
+.empty{
+    height: 85%;
+    width: 80%;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #CCC;
+    transition: .2s;
+}
+
+.number,
+.empty{
+    background-color: #333;
+}
+
+.number,
+.operator{
+    cursor: pointer;
+    border: 1.5px solid #34abeb;
+}
+
+.operator{
+    background-color: #666;
+}
+
+.operator:active,
+.number:active{
+    height: 80%;
+    width: 75%;
+    font-size: 1.35rem;
+}
+
+.operator:focus,
+.number:focus,
+.empty:focus{
+    outline: 0;
+}
+
+.clear{
+    background-color: #222;
+}
+
+.equal{
+    color: #333;
+    background-color: #34abeb;
+}
